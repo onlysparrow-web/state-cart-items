@@ -1,0 +1,12 @@
+var a = this.state.cartItems;
+var b = info.id;
+console.log(a);
+var d = a.some((p) => p.id == b);
+console.log(d);
+if (d == false) {
+  this.setState({ cartItems: [...this.state.cartItems, info] });
+  console.log("id of product", info.id);
+} else {
+  info.qty += 1;
+  this.setState({ cartItems: [...this.state.cartItems, info.qty] });
+}
