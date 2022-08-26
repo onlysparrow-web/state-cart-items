@@ -34,8 +34,7 @@ export class Main extends Component {
     }
   };
   addcart = (infos) => {
-    infos.qty += 1;
-    this.setState({ cartItems: [...this.state.cartItems] });
+    this.adding(infos)
   };
   minuscart = (infos) => {
     if (infos.qty == 1) {
